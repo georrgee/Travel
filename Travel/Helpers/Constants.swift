@@ -17,5 +17,19 @@ struct Keywords {
         static let mainTabBarController     = "MainTabBarController"
         static let onboardingViewController = "OnboardingVC"
     }
+}
+
+
+enum TravelImages {
+    
+    static let mapImage     = "map-travel"
+    static let coupleImage  = "couple-travel"
+    static let planeImage   = "plane-travel"
+    
+}
+
+enum CellID {
+    
+    static let collectionCellID = "OnboardingCell"
     
 }
