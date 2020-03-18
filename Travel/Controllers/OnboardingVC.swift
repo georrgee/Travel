@@ -5,6 +5,10 @@
 
 import UIKit
 
+protocol OnboardingDelegate: class {
+    func showMainTabBarController()
+}
+
 class OnboardingVC: UIViewController {
     
     @IBOutlet weak var collectionView:   UICollectionView!
@@ -46,6 +50,14 @@ class OnboardingVC: UIViewController {
     @IBAction func getStartedButtonTapped(_ sender: UIButton) {
         performSegue(withIdentifier: Keywords.Segue.showLoginSignUpScreen, sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Keywords.Segue.showLoginSignUpScreen {
+            if let destination = segue.destination as? LoginVC {
+                destination.delegate = self
+            }
+        }
+    }
 }
 
 
@@ -76,5 +88,18 @@ extension OnboardingVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         let index = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
         showIndex(atIndex: index)
         self.pageControl.currentPage = index
+    }
+}
+
+extension OnboardingVC: OnboardingDelegate {
+    
+    func showMainTabBarController() {
+        //dismiss login view controller first
+        // then show main tab bar
+        if let loginViewController = self.presentedViewController as? LoginVC {
+            loginViewController.dismiss(animated: true) {
+                PresenterManager.shared.show(vc: .mainTabBarController)
+            }
+        }
     }
 }
