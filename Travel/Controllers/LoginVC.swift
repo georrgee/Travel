@@ -4,6 +4,7 @@
 //  Copyright © 2020 GeeTeam. All rights reserved.
 
 import UIKit
+import MBProgressHUD
 
 class LoginVC: UIViewController {
     
@@ -18,7 +19,7 @@ class LoginVC: UIViewController {
     
     weak var delegate: OnboardingDelegate?
     
-    private let isSuccessfulLogin = false
+    private let isSuccessfulLogin = true
     
     private enum PageType {
         case login
@@ -74,10 +75,14 @@ class LoginVC: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-        if isSuccessfulLogin {
-            delegate?.showMainTabBarController()
-        } else {
-            errorMessage = "Your email or password is invalid. Please try again"
+        
+        delay(durationInSeconds: 2.0) {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            if self.isSuccessfulLogin {
+                self.delegate?.showMainTabBarController()
+            } else {
+                self.errorMessage = "Your email or password is invalid. Please try again"
+            }
         }
     }
 }

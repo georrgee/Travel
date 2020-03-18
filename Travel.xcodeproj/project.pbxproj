@@ -21,9 +21,11 @@
 		368C3E622416E57400FAC3B7 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368C3E612416E57400FAC3B7 /* SettingsVC.swift */; };
 		368C3E652416E83F00FAC3B7 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368C3E642416E83F00FAC3B7 /* PresenterManager.swift */; };
 		368C3E672416EB4600FAC3B7 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368C3E662416EB4600FAC3B7 /* OnboardingVC.swift */; };
+		7E893703FFBD5B7872F9D69A /* Pods_Travel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7836E75365DD4ABD0468DC1 /* Pods_Travel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09A1259F087E9E3C7443A053 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
 		3604156D240C589200090EF3 /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36041570240C589200090EF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36041572240C589200090EF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		368C3E612416E57400FAC3B7 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		368C3E642416E83F00FAC3B7 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		368C3E662416EB4600FAC3B7 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		682B35B96AF7D14DA57EE23C /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
+		A7836E75365DD4ABD0468DC1 /* Pods_Travel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E893703FFBD5B7872F9D69A /* Pods_Travel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102B1D76B363B5E558375162 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7836E75365DD4ABD0468DC1 /* Pods_Travel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		36041564240C589200090EF3 = {
 			isa = PBXGroup;
 			children = (
 				3604156F240C589200090EF3 /* Travel */,
 				3604156E240C589200090EF3 /* Products */,
+				5AB1D910B328B3D3A4CE5BB7 /* Pods */,
+				102B1D76B363B5E558375162 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +146,16 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		5AB1D910B328B3D3A4CE5BB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				682B35B96AF7D14DA57EE23C /* Pods-Travel.debug.xcconfig */,
+				09A1259F087E9E3C7443A053 /* Pods-Travel.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36041581240C589300090EF3 /* Build configuration list for PBXNativeTarget "Travel" */;
 			buildPhases = (
+				1E05055D1688E1855DA3A125 /* [CP] Check Pods Manifest.lock */,
 				36041569240C589200090EF3 /* Sources */,
 				3604156A240C589200090EF3 /* Frameworks */,
 				3604156B240C589200090EF3 /* Resources */,
+				E3B2F701F413D27673D33901 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +223,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E05055D1688E1855DA3A125 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Travel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3B2F701F413D27673D33901 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Travel/Pods-Travel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Travel/Pods-Travel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Travel/Pods-Travel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		36041569240C589200090EF3 /* Sources */ = {
@@ -354,6 +423,7 @@
 		};
 		36041582240C589300090EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 682B35B96AF7D14DA57EE23C /* Pods-Travel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +442,7 @@
 		};
 		36041583240C589300090EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09A1259F087E9E3C7443A053 /* Pods-Travel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

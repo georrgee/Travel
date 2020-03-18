@@ -4,6 +4,7 @@
 //  Copyright © 2020 GeeTeam. All rights reserved.
 
 import UIKit
+import MBProgressHUD
 
 class SettingsVC: UIViewController {
     
@@ -18,6 +19,10 @@ class SettingsVC: UIViewController {
     
     @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem) {
         print("Logout button tapped!")
-        PresenterManager.shared.show(vc: .onboarding)
+        MBProgressHUD.showAdded(to: view, animated: true)
+        delay(durationInSeconds: 0.5) {
+            MBProgressHUD.hide(for: self.view, animated: true)
+            PresenterManager.shared.show(vc: .onboarding)
+        }
     }
 }
